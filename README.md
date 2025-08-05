@@ -4,3 +4,5 @@ Exercício técnico para o processo seletivo da DTI Digital, que consiste em um 
 ## Funcionalidades
 
 ## Tecnologias
+
+## Como executar
