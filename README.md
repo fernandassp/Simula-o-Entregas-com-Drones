@@ -17,7 +17,7 @@ A cidade, neste problema, é uma malha de coordenadas (XY). Nesta solução, o X
 - Visual Studio 2022: IDE utilizada para o desenvolvimento do código.  
 - Git: controle de versão do projeto  
 - GitHub: hospedagem remota do repositório  
-- xUnit: framework de testes que será utilizado para escrever testes automatizados.  
+- xUnit: framework de testes, utilizado para escrever testes automatizados.  
 - Plataformas de Inteligência Artificial: auxílio na revisão do código durante o desenvolvimento e no aprendizado de novas tecnologias (por exemplo, o framework xUnit) e técnicas de programação.  
 
 ## Como executar
@@ -27,11 +27,11 @@ Pré requisitos para executar o projeto:
 Modo de executar:  
 1 -Clone o repositório do projeto via GitHub ou abra diretamente no Visual Studio.  
 2- No Visual Studio, abra a solução .sln  
-3- Pressione Ctrl + F5 para executar a aplicação sem debug.  
-4- Interaja com o menu no console para cadastrar drones, pedidos, alocar entregas ou visualizar relatórios.
+3- Pressione Ctrl + F5 para executar a aplicação sem debug.    
+4- Interaja com o menu no console para cadastrar drones, pedidos, alocar entregas ou visualizar relatórios (para visualizar dados nos relatórios, certifique-se de antes alocar pedidos nos drones para que as entregas sejam feitas).  
 
 ## Prompts utilizados na IA
-Durante o desenvolvimento, foram utilizadas ferramentas de IA para esclarecer dúvidas técnicas e de interpretação, melhorar trechos de código e otimizar lógicas, além de conhecer softwares para a implementação de testes.  
+Durante o desenvolvimento, foram utilizadas ferramentas de IA para esclarecer dúvidas técnicas e de interpretação, melhorar trechos de código e otimizar lógicas, além de conhecer frameworks para a implementação de testes.  
 
  ### Memórias utilizadas
  Estas memórias foram mantidas durante o desenvolvimento para manter o contexto do projeto:  
@@ -41,8 +41,9 @@ Durante o desenvolvimento, foram utilizadas ferramentas de IA para esclarecer d�
 - Tecnologia usada: Projeto em C# (console), utilizando Visual Studio 2022.
 
 ### Exemplos de Prompts utilizados
-- "Minha função Remove está dando InvalidOperationException. Pode me ajudar a identificar onde e por quê ocorre esse erro?"  
+- "Minha função Remove está dando InvalidOperationException. Me ajude a identificar onde e por quê ocorre esse erro"  
 - "Como posso criar um mapa da cidade usando apenas caracteres ASCII no console, com posições dos pedidos e drones?"
 - "Como colorir o fundo do console, apenas para alguns caracteres?"
 - "Me ajude a identificar o erro neste trecho de código"
 - "Como posso alocar os pedidos nos drones e remover da lista de pedidos do simulador os que já foram entregues, garantindo que as variáveis que guardam as listas ordenadas apontam para o mesmo endereço de memória da lista original de pedidos?"
+- "Como usar o framework xUnit para fazer os testes? Me dê exemplos de testes que poderiam ser feitos com ele"  
