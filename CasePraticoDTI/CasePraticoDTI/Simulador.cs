@@ -181,7 +181,7 @@ namespace SimuladorEncomendasDrone
             return sb.ToString();
         }
 
-        public string TempoMedioPorEntrega() // conversão pra minutos
+        public string TempoMedioPorEntrega()
         {
             StringBuilder sb = new StringBuilder();
             double somaTempos = 0;
@@ -194,13 +194,32 @@ namespace SimuladorEncomendasDrone
                     entregasFeitas += d.PedidosEntregues();
                 }
             }
-            
-            double media = somaTempos / (double)entregasFeitas;
-            sb.AppendLine($"\n -Tempo médio por entrega: {media:N2}h.\n");
-            return sb.ToString();
 
+            double media = somaTempos / (double)entregasFeitas;
+            double mediaMinutos = media * 60;
+            // parte inteira da média
+            int minutos = (int)Math.Floor(mediaMinutos);
+            double parteDecimal = mediaMinutos - minutos;
+            int segundos = (int)Math.Round(parteDecimal * 60);
+
+            sb.AppendLine($"\n -Tempo médio por entrega: {media:N2}h, ou {minutos} minutos e {segundos} segundos.\n");
+            return sb.ToString();
         }
-        //mapa das entregas; tempo médio por entrega
+
+        /// <summary>
+        /// Retorna um relatório com o tempo total que foi gasto por todos os drones, em todas as suas entregas.
+        /// </summary>
+        /// <returns>String que informa o tempo total de entrega.</returns>
+        public string TempoTotalGastoEntregas()
+        {
+            StringBuilder sb = new StringBuilder();
+            double total = 0;
+            foreach (Drone d in _drones)
+                total += d.TempoTotalGasto();
+            sb.AppendLine($"\n -Tempo total gasto pelos drones: {total}h.\n");
+            return sb.ToString();
+        }
+        //mapa das entregas;
         // tempo total
         // bateria
         // testes
