@@ -1,0 +1,15 @@
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\bin\Debug\net8.0\CasePraticoDTI.exe
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\bin\Debug\net8.0\CasePraticoDTI.deps.json
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\bin\Debug\net8.0\CasePraticoDTI.runtimeconfig.json
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\bin\Debug\net8.0\CasePraticoDTI.dll
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\bin\Debug\net8.0\CasePraticoDTI.pdb
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.GeneratedMSBuildEditorConfig.editorconfig
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.AssemblyInfoInputs.cache
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.AssemblyInfo.cs
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.csproj.CoreCompileInputs.cache
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.sourcelink.json
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.dll
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\refint\CasePraticoDTI.dll
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.pdb
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\CasePraticoDTI.genruntimeconfig.cache
+C:\fe\Estagio\DTI\SimuladorEncomendasDrones\Simulacao-Entregas-com-Drones\CasePraticoDTI\CasePraticoDTI\obj\Debug\net8.0\ref\CasePraticoDTI.dll

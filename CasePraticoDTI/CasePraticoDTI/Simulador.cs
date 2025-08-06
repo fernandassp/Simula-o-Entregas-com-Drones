@@ -53,13 +53,7 @@ namespace SimuladorEncomendasDrone
             int x1 = (int)char.GetNumericValue(p1[0]); int x2 = (int)char.GetNumericValue(p2[0]);
             int y1 = (char)p1[1] - 'A' + 1; int y2 = (char)p2[1] - 'A' + 1;
 
-            /* if (x1 == -1 || x2 == -1)
-                 throw new Exception("O X da coordenada é inválido.");
-               if(y1 < 1 || y1>=27 ||y2 <1 || y2 >=27)
-                 throw new Exception("O Y da coordenada é inválido."); */
-
             double distancia = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-            //Console.WriteLine($"x1 = {x1}. y1 = {y1}\nx2 = {x2}. y2 = {y2}\nDistancia: {distancia}");
             return distancia;
         }
 
@@ -113,19 +107,13 @@ namespace SimuladorEncomendasDrone
                 }
         }
 
-        private IEnumerable<Pedido> OrdenarPedidos(Comparer<Pedido> comp, IEnumerable<Pedido> pedidos)
+        private List<Pedido> OrdenarPedidos(Comparer<Pedido> comp, IEnumerable<Pedido> pedidos)
         {
             List<Pedido> pedidosEmLista = pedidos.ToList();
             pedidosEmLista.Sort(comp);
             return pedidosEmLista;
         }
-        private IEnumerable<Drone> OrdenarDrones(Comparer<Drone> comp, IEnumerable<Drone> drones)
-        {
-            List<Drone> dronesEmLista = drones.ToList();
-            dronesEmLista.Sort(comp);
-            return dronesEmLista;
-        }
-
+      
         public string RelatorioPedidos()
         {
             StringBuilder sb = new StringBuilder();
@@ -157,13 +145,65 @@ namespace SimuladorEncomendasDrone
             return sb.ToString();
         }
 
-        public void MostrarPedidosEntregues()
+        public string QuantidadeEntregasFeitas()
         {
-            foreach(Pedido p in _pedidos)
-            {
-                if(p.FoiEntregue())
-                    Console.WriteLine(p);
-            }
+            StringBuilder sb = new StringBuilder();
+            int quantidade = 0;
+            foreach (Drone d in _drones)
+                quantidade += d.PedidosEntregues();
+            sb.AppendLine($"\n -Entregas realizadas: {quantidade}.\n");
+            return sb.ToString();
         }
+        public string DroneMaisEficiente()
+        {
+            StringBuilder sb = new StringBuilder();
+            Drone melhor = _drones.First();
+            foreach(Drone d in _drones)
+            {
+                if (d.PedidosEntregues() > melhor.PedidosEntregues())
+                    melhor = d;
+            }
+            sb.AppendLine($"\n -Drone mais eficiente: #{melhor.GetID()} - Realizou {melhor.PedidosEntregues()} entregas.\n");
+            return sb.ToString();
+        }
+
+        public string MapaCidade() //??
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("    A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z");
+            
+            for (int i = 0; i < 9; i++)
+            {
+
+                sb.AppendLine($"{i+1}\n");
+            }
+
+            return sb.ToString();
+        }
+
+        public string TempoMedioPorEntrega() // conversão pra minutos
+        {
+            StringBuilder sb = new StringBuilder();
+            double somaTempos = 0;
+            double entregasFeitas = 0;
+            foreach (Drone d in _drones)
+            { 
+                if(d.PedidosEntregues() > 0)
+                {
+                    somaTempos += d.TempoTotalGasto();
+                    entregasFeitas += d.PedidosEntregues();
+                }
+            }
+            
+            double media = somaTempos / (double)entregasFeitas;
+            sb.AppendLine($"\n -Tempo médio por entrega: {media:N2}h.\n");
+            return sb.ToString();
+
+        }
+        //mapa das entregas; tempo médio por entrega
+        // tempo total
+        // bateria
+        // testes
+        // documentação
     }
 }

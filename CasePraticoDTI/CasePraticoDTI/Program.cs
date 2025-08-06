@@ -44,7 +44,8 @@ namespace SimuladorEncomendasDrone
                 Random r = new Random();
                 double capac = r.Next(1, 15);
                 double distMax = r.Next(3, 11);
-                s.AdicionarDrone(new Drone(capac, distMax, coord));
+                double velMedia = r.Next(30, 51);
+                s.AdicionarDrone(new Drone(capac, distMax, coord, velMedia));
             }
         }
         static void Main(string[] args)
@@ -52,15 +53,17 @@ namespace SimuladorEncomendasDrone
             Simulador s = new Simulador();
             GerarPedidos(s);
             GerarDrones(s);
+
             
             Console.WriteLine("\n" + s.RelatorioPedidos());
             Console.WriteLine();
             Console.WriteLine(s.RelatorioDrone());
 
             s.AlocarPedidosNoDrone();
-            s.MostrarPedidosEntregues();
+            Console.WriteLine(s.QuantidadeEntregasFeitas());
 
-            
+
+            Console.WriteLine(s.TempoMedioPorEntrega());
         }
     }
 }

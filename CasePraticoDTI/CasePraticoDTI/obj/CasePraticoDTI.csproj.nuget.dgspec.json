@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\fe\\Estagio\\DTI\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj": {}
+    "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj": {}
   },
   "projects": {
-    "C:\\fe\\Estagio\\DTI\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj": {
+    "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\fe\\Estagio\\DTI\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj",
+        "projectUniqueName": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj",
         "projectName": "CasePraticoDTI",
-        "projectPath": "C:\\fe\\Estagio\\DTI\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj",
+        "projectPath": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\CasePraticoDTI.csproj",
         "packagesPath": "C:\\Users\\Fernanda\\.nuget\\packages\\",
-        "outputPath": "C:\\fe\\Estagio\\DTI\\CasePraticoDTI\\CasePraticoDTI\\obj\\",
+        "outputPath": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

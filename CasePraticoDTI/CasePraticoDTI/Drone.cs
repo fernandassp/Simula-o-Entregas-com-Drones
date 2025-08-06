@@ -18,22 +18,10 @@ namespace SimuladorEncomendasDrone
         private string _localizacao;
         private LinkedList<Pedido> _pedidosALevar;
         private int _quantPedidosLevados;
-        public Drone(double capacidade, double distanciaMaxima)
-        {
-            if (capacidade <= 0)
-                throw new ArgumentException("A capacidade do drone deve ser maior que 0 kg.");
-            if (distanciaMaxima <= 0)
-                throw new ArgumentException("A distância máxima que o drone alcança deve ser maior que 0 km.");
-            _capacidade = capacidade;
-            _pesoAtual = 0;
-            _distanciaMaxima = distanciaMaxima;
-            _cargaBateria = 100;
-            _id = _proxID;
-            _proxID++;
-            _quantPedidosLevados = 0;
-            _pedidosALevar = new LinkedList<Pedido>();
-        }
-        public Drone(double capacidade, double distanciaMaxima, string localOrigem)
+        private double _velocidadeMedia;
+        private double _tempoTotalGasto;
+        
+        public Drone(double capacidade, double distanciaMaxima, string localOrigem, double velocidadeMedia)
         {
             if (capacidade <= 0)
                 throw new ArgumentException("A capacidade do drone deve ser maior que 0 kg.");
@@ -42,6 +30,8 @@ namespace SimuladorEncomendasDrone
             bool coordValida = Simulador.VerificarCoordenadaVálida(localOrigem);
             if (!coordValida)
                 throw new ArgumentException("A coordenada é inválida.");
+            if(velocidadeMedia <= 0)
+                throw new ArgumentException("A velocidade média do drone deve ser maior que 0 km/h.");
 
             _capacidade = capacidade; _pesoAtual= 0;
             _distanciaMaxima = distanciaMaxima;
@@ -51,6 +41,8 @@ namespace SimuladorEncomendasDrone
             _localizacao = _localOrigem = localOrigem;
             _quantPedidosLevados= 0;
             _pedidosALevar = new LinkedList<Pedido>();
+            _velocidadeMedia = velocidadeMedia;
+            _tempoTotalGasto = 0;
         }
 
         private bool PodeViajarAte(string coordenada)
@@ -91,10 +83,11 @@ namespace SimuladorEncomendasDrone
         {
             if (_pedidosALevar == null)
                 throw new Exception("Não há nenhum pedido para ser levado por este drone.");
-
+            
             while (_pedidosALevar.Count > 0)
             {
-                var pedido = _pedidosALevar.First();
+                Pedido pedido = _pedidosALevar.First();
+                _tempoTotalGasto += Simulador.CalcularDistanciaEntre(pedido.GetLocalizacao(), _localizacao) / _velocidadeMedia;
                 _localizacao = pedido.GetLocalizacao();
                 _pesoAtual -= pedido.GetPeso();
                 _pedidosALevar.RemoveFirst();
@@ -104,6 +97,7 @@ namespace SimuladorEncomendasDrone
 
             Console.WriteLine($"\t**Drone #{GetID()} viajou!**");
         }
+
 
         public override string ToString()
         {
@@ -130,16 +124,24 @@ namespace SimuladorEncomendasDrone
         {
             return _pedidosALevar.Count;
         }
+
+        /// <summary>
+        /// Retorna quantos pedidos um drone entregou.
+        /// </summary>
+        /// <returns>Quantidade de pedidos entregues.</returns>
+        public int PedidosEntregues()
+        {
+            return _quantPedidosLevados;
+        }
        
-        // O sistema precisa alocar os pacotes nos drones com o menor número de viagens possível
-        // Buscar combinações de pacotes por viagem que maximizem o uso do drone (capacidade + alcance)
-
-        // saber quais pedidos tem a menor distancia em relação ao drone (tbm olhar prioridade e peso) +pri, -dist, -peso
-        // escolher pedidos que serão levados pelo drone; os entregues, remover da lista 
-        // escolher qual drone levará os pedidos?
-
-        // tempo total de entrega
-        // fila de entrega por prioridade + tempo de chegada
-        // Relatórios, dashboard
+        /// <summary>
+        /// Retorna o valor referente a quanto tempo o drone gastou realizando todas as suas entregas.
+        /// </summary>
+        /// <returns>Quanto tempo (em horas) foi gasto.</returns>
+        public double TempoTotalGasto()
+        {
+            return _tempoTotalGasto;
+        }
+       
     }
 }
