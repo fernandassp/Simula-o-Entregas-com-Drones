@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,19 +29,6 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pedido.cs",
-              "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Pedido.cs",
-              "RelativeDocumentMoniker": "CasePraticoDTI\\Pedido.cs",
-              "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Pedido.cs",
-              "RelativeToolTip": "CasePraticoDTI\\Pedido.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAowEMAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-06T15:14:39.321Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
@@ -51,20 +38,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Pedido.cs",
+              "RelativeDocumentMoniker": "CasePraticoDTI\\Pedido.cs",
+              "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Pedido.cs",
+              "RelativeToolTip": "CasePraticoDTI\\Pedido.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowEMAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T15:14:39.321Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Program.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Program.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Program.cs",
               "RelativeToolTip": "CasePraticoDTI\\Program.cs",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAAwLoAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAowH4AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T20:49:32.164Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Drone.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Drone.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Drone.cs",
@@ -77,13 +76,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Simulador.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Simulador.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Simulador.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Simulador.cs",
               "RelativeToolTip": "CasePraticoDTI\\Simulador.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAswJgAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAgwJgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T20:29:20.383Z",
               "EditorCaption": ""

@@ -120,11 +120,12 @@ namespace SimuladorEncomendasDrone
                         break;
                     case 2:
                         Console.Clear();
-                        Console.WriteLine("-> Informe a localização do pedido (coordenada (x,y) sendo X um inteiro de 1 a 9 e Y uma letra de A a Z):");
+                        Console.WriteLine($"-> Informe a localização do pedido (coordenada (x,y) sendo X um inteiro de 1 a 9 e Y uma letra de A a Z), que seja diferente da origem dos drones, que é {origemDrones}:");
                         string coord = Console.ReadLine();
-                        while (!Simulador.VerificarCoordenadaVálida(coord))
+                        while (coord.Length != 2 || !Simulador.VerificarCoordenadaVálida(coord) || coord.ToUpper() == origemDrones.ToUpper())
                         {
                             Console.WriteLine("A coordenada é inválida. Digite outra:");
+                            coord = Console.ReadLine();
                         }
                         Console.WriteLine("-> Informe a prioridade do pedido (alta, média ou baixa):");
                         string prioridade = Console.ReadLine(); prioridade = prioridade.ToLower();
