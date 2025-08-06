@@ -55,7 +55,7 @@ namespace SimuladorEncomendasDrone
 
         public bool PodeReceberPedido(Pedido p)
         {
-            return (!p.FoiEntregue()) && PodeViajarAte(p.GetLocalizacao()) && CapacidadeRestante() >= p.GetPeso();
+            return (!p.FoiEntregue()) && PodeViajarAte(p.GetLocalizacao()) && CapacidadeRestante() >= p.GetPeso() && _cargaBateria > 30;
         }
 
         public double CapacidadeRestante()
@@ -83,7 +83,7 @@ namespace SimuladorEncomendasDrone
         {
             if (_pedidosALevar == null)
                 throw new Exception("Não há nenhum pedido para ser levado por este drone.");
-            
+            string localAnterior = _localOrigem;
             while (_pedidosALevar.Count > 0)
             {
                 Pedido pedido = _pedidosALevar.First();
@@ -92,16 +92,23 @@ namespace SimuladorEncomendasDrone
                 _pesoAtual -= pedido.GetPeso();
                 _pedidosALevar.RemoveFirst();
                 _quantPedidosLevados++;
+                if (Simulador.CalcularDistanciaEntre(localAnterior, _localizacao) >= 3)
+                    _cargaBateria -= 15;
+                localAnterior = _localizacao;
             }
             _localizacao = _localOrigem;
-
-            Console.WriteLine($"\t**Drone #{GetID()} viajou!**");
+            
+            Console.WriteLine($"\t**Drone #{GetID()} viajou!** - bateria: {_cargaBateria}%");
+            Recarregar();
         }
 
-
+        public void Recarregar()
+        {
+            _cargaBateria = 100;
+        }
         public override string ToString()
         {
-            return $"Drone de ID {_id}\n\tCapacidade: {_capacidade}kg. Distancia max.: {_distanciaMaxima}km. Localização: {_localizacao}\n";
+            return $"Drone de ID {_id}\n\tCapacidade: {_capacidade}kg. Distancia max.: {_distanciaMaxima}km. Localização: {_localizacao}. Vel. média: {_velocidadeMedia}km/h.\n";
         }
         public string GetLocalOrigem()
         {

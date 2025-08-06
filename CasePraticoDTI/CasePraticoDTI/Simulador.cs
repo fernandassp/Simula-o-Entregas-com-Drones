@@ -79,9 +79,9 @@ namespace SimuladorEncomendasDrone
             string origemDrones = _drones.First().GetLocalOrigem();
             IEnumerable<Drone> dronesOrdenados = _drones.OrderByDescending(d => d.GetCapacidade()).ThenBy(d => d.GetAlcance());
 
-            // ordenar pedidos por prioridade (alta - media - baixa), peso (maior - menor) e distância (menor - maior)
+            // ordenar pedidos por prioridade (alta - media - baixa), peso (menor-maior) e distância (menor - maior)
             List<Pedido> pedidosOrdenados = _pedidos.OrderByDescending(p => p.GetPrioridade())
-                .ThenByDescending(p => p.GetPeso()).ThenBy(p => CalcularDistanciaEntre(p.GetLocalizacao(), origemDrones)).ToList();   
+                .ThenBy(p => p.GetPeso()).ThenBy(p => CalcularDistanciaEntre(p.GetLocalizacao(), origemDrones)).ToList();   
              
                 foreach (Drone d in dronesOrdenados)
                 {
@@ -167,15 +167,43 @@ namespace SimuladorEncomendasDrone
             return sb.ToString();
         }
 
-        public string MapaCidade() //??
+        public string MapaCidade()
         {
+            char[,] mapa = new char[9, 26];
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("    A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z");
+            sb.AppendLine("\n\t\t\t=== Mapa da Cidade ===\n\t-Legenda:\n\tP: Há um pedido nesta coordenada\n\tE: Pedido foi entregue na coordenada\n\tD: Local de origem dos drones\n");
+            sb.AppendLine("    A   B   C   D   E   F   G   H   I   J   K   L   M   N   O   P   Q   R   S   T   U   V   W   X   Y   Z\n");
             
-            for (int i = 0; i < 9; i++)
+            for(int i = 0; i<mapa.GetLength(0); i++)
             {
-
-                sb.AppendLine($"{i+1}\n");
+                for(int j = 0; j<mapa.GetLength(1); j++)
+                {
+                    mapa[i, j] = '.';
+                }
+            }
+            string origemDrones = _drones.First().GetLocalOrigem();
+            int xDrones = (int)char.GetNumericValue(origemDrones[0]);
+            int yDrones = (char)origemDrones[1] - 'A' + 1;
+            mapa[xDrones - 1, yDrones - 1] = 'D';
+            foreach (Pedido p in _pedidos)
+            {
+                string local = p.GetLocalizacao();
+                int xCoordenada = (int)char.GetNumericValue(local[0]);
+                int yCoordenada = (char)local[1] - 'A' + 1;
+                if (!p.FoiEntregue())
+                    mapa[xCoordenada - 1, yCoordenada - 1] = 'P';
+                else
+                    mapa[xCoordenada - 1, yCoordenada - 1] = 'E';
+                
+            }
+            for (int i = 0; i < mapa.GetLength(0); i++)
+            {
+                sb.Append($"{i+1}");
+                for (int j = 0; j < mapa.GetLength(1); j++)
+                {
+                    sb.Append($"   {mapa[i,j]}");
+                }
+                sb.AppendLine();
             }
 
             return sb.ToString();
@@ -194,7 +222,6 @@ namespace SimuladorEncomendasDrone
                     entregasFeitas += d.PedidosEntregues();
                 }
             }
-
             double media = somaTempos / (double)entregasFeitas;
             double mediaMinutos = media * 60;
             // parte inteira da média
@@ -215,13 +242,22 @@ namespace SimuladorEncomendasDrone
             StringBuilder sb = new StringBuilder();
             double total = 0;
             foreach (Drone d in _drones)
-                total += d.TempoTotalGasto();
-            sb.AppendLine($"\n -Tempo total gasto pelos drones: {total}h.\n");
+            {
+                if(d.PedidosEntregues() > 0)
+                {
+                    total += d.TempoTotalGasto();
+                    TimeSpan tempoDrone = TimeSpan.FromHours(d.TempoTotalGasto());
+                    int horas = tempoDrone.Hours; int minutos = tempoDrone.Minutes; int segundos = tempoDrone.Seconds;
+                    sb.AppendLine($"\t-Tempo gasto pelo drone #{d.GetID()}: {horas:D2} horas, {minutos:D2} minutos e {segundos:D2} segundos. - {d.PedidosEntregues()} pedidos entregues.");
+                }
+            }
+            TimeSpan tempo = TimeSpan.FromHours(total);
+            int totalHoras = tempo.Hours; int totalMin = tempo.Minutes; int totalSeg = tempo.Seconds;
+            sb.AppendLine($"\n -Tempo total gasto pelos drones: {totalHoras:D2}:{totalMin:D2}:{totalSeg:D2}.\n");
+            
             return sb.ToString();
         }
-        //mapa das entregas;
-        // tempo total
-        // bateria
+        
         // testes
         // documentação
     }

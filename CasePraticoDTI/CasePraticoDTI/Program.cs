@@ -18,7 +18,7 @@ namespace SimuladorEncomendasDrone
                 string x = r.Next(1, 10).ToString();
                 char y = (char)('A' + r.Next(0, 26));
                 string coord = x + y;
-                double peso = r.Next(1, 25);
+                double peso = r.Next(1, 20);
                 int prioridade = r.Next(1,4);
                 if (prioridade == 1)
                 {
@@ -42,8 +42,8 @@ namespace SimuladorEncomendasDrone
             for (int i = 0; i<15; i++)
             {
                 Random r = new Random();
-                double capac = r.Next(1, 15);
-                double distMax = r.Next(3, 11);
+                double capac = r.Next(10, 30);
+                double distMax = r.Next(10, 20);
                 double velMedia = r.Next(30, 51);
                 s.AdicionarDrone(new Drone(capac, distMax, coord, velMedia));
             }
@@ -59,11 +59,18 @@ namespace SimuladorEncomendasDrone
             Console.WriteLine();
             Console.WriteLine(s.RelatorioDrone());
 
+            Console.WriteLine(s.MapaCidade());
+
             s.AlocarPedidosNoDrone();
             Console.WriteLine(s.QuantidadeEntregasFeitas());
 
 
             Console.WriteLine(s.TempoMedioPorEntrega());
+            Console.WriteLine(s.TempoTotalGastoEntregas());
+            Console.WriteLine(s.DroneMaisEficiente());
+
+            Console.WriteLine(s.MapaCidade());
+
         }
     }
 }
