@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimuladorEncomendasDrone
 {
-    internal class Drone
+    public class Drone
     {
         private double _capacidade;
         private double _pesoAtual;
@@ -78,10 +78,10 @@ namespace SimuladorEncomendasDrone
         /// Aloca um pedido a um drone, alterando seu peso atual e adicionando-o à lista de pedidos do drone.
         /// </summary>
         /// <param name="p">Pedido a ser alocado</param>
-        /// <returns>Retorna -1 se a operação não foi conclída (peso máximo excedido).</returns>
+        /// <returns>Retorna -1 se a operação não foi concluída (drone não cumpria os requisitos necessários para levar o pedido).</returns>
         public int ReceberPedido(Pedido p)
         {
-            if (_pesoAtual + p.GetPeso() <= _capacidade)
+            if (PodeReceberPedido(p))
             {
                 _pesoAtual += p.GetPeso();
                 _pedidosALevar.AddLast(p);
@@ -106,9 +106,13 @@ namespace SimuladorEncomendasDrone
                 _pesoAtual -= pedido.GetPeso();
                 _pedidosALevar.RemoveFirst();
                 _quantPedidosLevados++;
-                if (Simulador.CalcularDistanciaEntre(localAnterior, _localizacao) >= 3)
-                    _cargaBateria -= 15;
+                if (Simulador.CalcularDistanciaEntre(localAnterior, _localizacao) >= 5)
+                    _cargaBateria -= 10;
+                
+                if (_cargaBateria <= 30)
+                    Recarregar();
                 localAnterior = _localizacao;
+
             }
             _localizacao = _localOrigem;
             
@@ -121,6 +125,7 @@ namespace SimuladorEncomendasDrone
         /// </summary>
         public void Recarregar()
         {
+            _localizacao = _localOrigem;
             _cargaBateria = 100;
         }
         public override string ToString()

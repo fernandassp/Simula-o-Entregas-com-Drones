@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimuladorEncomendasDrone
 {
-    internal class Program
+    public class Program
     {
         /// <summary>
         /// Gera pedidos aleatórios para o Simulador, com prioridades que variam entre "alta", "média" e "baixa", coordenadas (x, y) (X: de 1 a 9, Y: de A a Z) e pesos que vão de 1kg a 20kg.
@@ -143,7 +143,7 @@ namespace SimuladorEncomendasDrone
                         }
                         Pedido novoPedido = new Pedido(coord, peso, prioridade);
                         s.AdicionarPedido(novoPedido);
-                        Console.WriteLine($" ** Pedido registrado com sucesso! ID: #{novoPedido.GetID()}\n.");
+                        Console.WriteLine($" ** Pedido registrado com sucesso! ID: #{novoPedido.GetID()}\n");
                         break;
                     case 3:
                         Console.Clear();

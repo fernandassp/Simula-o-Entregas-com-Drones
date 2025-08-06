@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SimuladorEncomendasDrone
 {
-    internal class Simulador
+    public class Simulador
     {
         private LinkedList<Pedido> _pedidos;
         private LinkedList<Drone> _drones; 
@@ -19,7 +19,7 @@ namespace SimuladorEncomendasDrone
             _pedidos = new LinkedList<Pedido>();
             _drones = new LinkedList<Drone>();
         }
-     
+        
         /// <summary>
         /// Adiciona novo pedido no simulador.
         /// </summary>
@@ -225,6 +225,18 @@ namespace SimuladorEncomendasDrone
                 quantidade += d.PedidosEntregues();
             sb.AppendLine($"\n -Entregas realizadas: {quantidade}.\n");
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Retorna a quantidade de entregas que foram realizadas.
+        /// </summary>
+        /// <returns>Inteiro que representa o número de pedidos entregues</returns>
+        public int TotalEntregasFeitas()
+        {
+            int quant = 0;
+            foreach (Drone d in _drones)
+                quant += d.PedidosEntregues();
+            return quant;
         }
         /// <summary>
         /// Verifica qual drone realizou a maior quantidade de entregas, caso já tenha sido realizada alguma, e retorna relatório com o resultado obtido.

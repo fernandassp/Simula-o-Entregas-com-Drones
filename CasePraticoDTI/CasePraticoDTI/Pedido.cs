@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimuladorEncomendasDrone
 {
-    internal class Pedido
+    public class Pedido
     {
         private string _localizacao;
         private double _peso;
@@ -25,7 +25,7 @@ namespace SimuladorEncomendasDrone
             if (peso <= 0)
                 throw new ArgumentException("O peso precisa ser maior que 0 kg.");
 
-            _localizacao = localizacao;
+            _localizacao = localizacao.ToUpper();
             _peso = peso;
             _id = _proxId; _proxId++;
             if (prioridade.ToLower() == "baixa")
