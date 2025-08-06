@@ -54,10 +54,19 @@ namespace SimuladorEncomendasDrone
         {
             return _id;
         }
+
+        /// <summary>
+        /// Verifica se um pedido já foi entregue.
+        /// </summary>
+        /// <returns>Verdadeiro se tiver sido entregue e falso caso não tenha sido ainda</returns>
         public bool FoiEntregue()
         {
             return _entregue;
         }
+
+        /// <summary>
+        /// Altera o atributo que determina se o pedido já foi entregue para "true"
+        /// </summary>
         public void MarcarComoEntregue()
         {
             _entregue = true;

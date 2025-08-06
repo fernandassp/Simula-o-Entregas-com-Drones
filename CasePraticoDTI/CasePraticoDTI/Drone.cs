@@ -11,7 +11,7 @@ namespace SimuladorEncomendasDrone
         private double _capacidade;
         private double _pesoAtual;
         private double _distanciaMaxima;
-        private int _cargaBateria; // pensar depois
+        private int _cargaBateria;
         private int _id;
         private static int _proxID = 1;
         private string _localOrigem;
@@ -45,6 +45,11 @@ namespace SimuladorEncomendasDrone
             _tempoTotalGasto = 0;
         }
 
+        /// <summary>
+        /// Verifica se a distância entre o ponto de origem do drone e determinada localização pode ser percorrida, com base no alcance do drone.
+        /// </summary>
+        /// <param name="coordenada">Localização que se deseja calcular a distância em relação à origem do drone</param>
+        /// <returns>Verdadeiro caso a distância seja adequada e falso caso contrário.</returns>
         private bool PodeViajarAte(string coordenada)
         {
             double distancia = Simulador.CalcularDistanciaEntre(coordenada, _localOrigem);
@@ -53,6 +58,11 @@ namespace SimuladorEncomendasDrone
             return false;
         }
 
+        /// <summary>
+        /// Verifica se o drone pode receber um pedido para entregar, com base em sua capacidade, distância do pedido e carga da bateria.
+        /// </summary>
+        /// <param name="p">Pedido a ser recebido</param>
+        /// <returns>Verdadeiro se o drone estiver apto a receber o pedido e falso caso não esteja.</returns>
         public bool PodeReceberPedido(Pedido p)
         {
             return (!p.FoiEntregue()) && PodeViajarAte(p.GetLocalizacao()) && CapacidadeRestante() >= p.GetPeso() && _cargaBateria > 30;
@@ -79,10 +89,14 @@ namespace SimuladorEncomendasDrone
             }
             return -1;
         }
+        /// <summary>
+        /// Simula a entrega dos pedidos, alterando a localização do drone, calculando a distância percorrida, a redução da bateria, a quantidade de pedidos levados e o tempo gasto, com base em sua velocidade média.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">Lançada quando não há pedidos para o drone realizar uma viagem.</exception>
         public void Viajar()
         {
             if (_pedidosALevar == null)
-                throw new Exception("Não há nenhum pedido para ser levado por este drone.");
+                throw new InvalidOperationException("Não há nenhum pedido para ser levado por este drone.");
             string localAnterior = _localOrigem;
             while (_pedidosALevar.Count > 0)
             {
@@ -102,6 +116,9 @@ namespace SimuladorEncomendasDrone
             Recarregar();
         }
 
+        /// <summary>
+        /// Recarrega a bateria do drone novamente para 100% após uma viagem
+        /// </summary>
         public void Recarregar()
         {
             _cargaBateria = 100;
@@ -127,6 +144,11 @@ namespace SimuladorEncomendasDrone
         {
             return _capacidade;
         }
+
+        /// <summary>
+        /// Retorna quantidade de pedidos a serem levados pelo drone.
+        /// </summary>
+        /// <returns>Quantidade de itens na lista que contém os pedidos pendentes para entrega do drone</returns>
         public int QuantosPedidosALevar()
         {
             return _pedidosALevar.Count;
