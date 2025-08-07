@@ -50,7 +50,7 @@ namespace SimuladorEncomendasDrone
         /// </summary>
         /// <param name="coordenada">Localização que se deseja calcular a distância em relação à origem do drone</param>
         /// <returns>Verdadeiro caso a distância seja adequada e falso caso contrário.</returns>
-        private bool PodeViajarAte(string coordenada)
+        public bool PodeViajarAte(string coordenada)
         {
             double distancia = Simulador.CalcularDistanciaEntre(coordenada, _localOrigem);
             if (distancia <= _distanciaMaxima)

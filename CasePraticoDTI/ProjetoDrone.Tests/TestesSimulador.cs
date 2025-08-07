@@ -24,6 +24,17 @@ namespace ProjetoDrone.Tests
             simulador.AlocarPedidosNoDrone();
         }
 
+        [Fact]
+        public void TesteVerificaCoordenadaCorretamente()
+        {
+            string coordenada1 = "32";
+            string coordenada2 = "aa";
+            string coordenada3 = "#1";
+            Assert.False(Simulador.VerificarCoordenadaVálida(coordenada1));
+            Assert.False(Simulador.VerificarCoordenadaVálida(coordenada2));
+            Assert.False(Simulador.VerificarCoordenadaVálida(coordenada3));
+        }
+
        
     }
 }

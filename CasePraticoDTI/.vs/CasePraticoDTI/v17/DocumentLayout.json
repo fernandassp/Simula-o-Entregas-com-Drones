@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E82DF629-5DB2-45FE-84D2-79F3BE99E2F4}|ProjetoDrone.Tests\\ProjetoDrone.Tests.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\projetodrone.tests\\testessimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E82DF629-5DB2-45FE-84D2-79F3BE99E2F4}|ProjetoDrone.Tests\\ProjetoDrone.Tests.csproj|solutionrelative:projetodrone.tests\\testessimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E82DF629-5DB2-45FE-84D2-79F3BE99E2F4}|ProjetoDrone.Tests\\ProjetoDrone.Tests.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\projetodrone.tests\\testespedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +19,16 @@
       "RelativeMoniker": "D:0:0:{E82DF629-5DB2-45FE-84D2-79F3BE99E2F4}|ProjetoDrone.Tests\\ProjetoDrone.Tests.csproj|solutionrelative:projetodrone.tests\\testesdrone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E82DF629-5DB2-45FE-84D2-79F3BE99E2F4}|ProjetoDrone.Tests\\ProjetoDrone.Tests.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\projetodrone.tests\\testessimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E82DF629-5DB2-45FE-84D2-79F3BE99E2F4}|ProjetoDrone.Tests\\ProjetoDrone.Tests.csproj|solutionrelative:projetodrone.tests\\testessimulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\simulador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|c:\\fe\\estagio\\dti\\simuladorencomendasdrones\\simulacao-entregas-com-drones\\casepraticodti\\casepraticodti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2AE76242-6FAF-4DD6-A7F5-C7294F921649}|CasePraticoDTI\\CasePraticoDTI.csproj|solutionrelative:casepraticodti\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,13 +50,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "TestesSimulador.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\ProjetoDrone.Tests\\TestesSimulador.cs",
               "RelativeDocumentMoniker": "ProjetoDrone.Tests\\TestesSimulador.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\ProjetoDrone.Tests\\TestesSimulador.cs",
               "RelativeToolTip": "ProjetoDrone.Tests\\TestesSimulador.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T20:13:24.878Z",
               "EditorCaption": ""
@@ -69,7 +69,7 @@
               "RelativeDocumentMoniker": "ProjetoDrone.Tests\\TestesDrone.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\ProjetoDrone.Tests\\TestesDrone.cs",
               "RelativeToolTip": "ProjetoDrone.Tests\\TestesDrone.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCwAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T20:11:59.799Z",
               "EditorCaption": ""
@@ -82,59 +82,59 @@
               "RelativeDocumentMoniker": "ProjetoDrone.Tests\\TestesPedido.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\ProjetoDrone.Tests\\TestesPedido.cs",
               "RelativeToolTip": "ProjetoDrone.Tests\\TestesPedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T20:04:25.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Pedido.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Pedido.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Pedido.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Pedido.cs",
               "RelativeToolTip": "CasePraticoDTI\\Pedido.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwCwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-06T15:14:39.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Program.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Program.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Program.cs",
               "RelativeToolTip": "CasePraticoDTI\\Program.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAowHgAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T20:49:32.164Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Drone.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Drone.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Drone.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Drone.cs",
               "RelativeToolTip": "CasePraticoDTI\\Drone.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAwwIcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAowEoAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T20:43:00.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Simulador.cs",
               "DocumentMoniker": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Simulador.cs",
               "RelativeDocumentMoniker": "CasePraticoDTI\\Simulador.cs",
               "ToolTip": "C:\\fe\\Estagio\\DTI\\SimuladorEncomendasDrones\\Simulacao-Entregas-com-Drones\\CasePraticoDTI\\CasePraticoDTI\\Simulador.cs",
               "RelativeToolTip": "CasePraticoDTI\\Simulador.cs",
-              "ViewState": "AgIAAG4BAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGUBAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T20:29:20.383Z",
               "EditorCaption": ""
