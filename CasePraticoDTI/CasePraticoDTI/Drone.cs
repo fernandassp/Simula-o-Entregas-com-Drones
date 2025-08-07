@@ -95,7 +95,7 @@ namespace SimuladorEncomendasDrone
         /// <exception cref="InvalidOperationException">Lançada quando não há pedidos para o drone realizar uma viagem.</exception>
         public void Viajar()
         {
-            if (_pedidosALevar == null)
+            if (_pedidosALevar.Count == 0)
                 throw new InvalidOperationException("Não há nenhum pedido para ser levado por este drone.");
             string localAnterior = _localOrigem;
             while (_pedidosALevar.Count > 0)

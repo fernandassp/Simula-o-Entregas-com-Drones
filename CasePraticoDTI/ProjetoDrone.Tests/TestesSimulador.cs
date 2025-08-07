@@ -24,6 +24,7 @@ namespace ProjetoDrone.Tests
             simulador.AlocarPedidosNoDrone();
         }
 
+
         [Fact]
         public void TesteVerificaCoordenadaCorretamente()
         {
@@ -35,6 +36,10 @@ namespace ProjetoDrone.Tests
             Assert.False(Simulador.VerificarCoordenadaVálida(coordenada3));
         }
 
-       
+        [Fact]
+        public void EntregaCorretamenteVariosPedidos()
+        {
+           
+        }
     }
 }

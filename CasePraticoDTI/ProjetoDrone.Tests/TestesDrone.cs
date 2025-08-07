@@ -44,5 +44,12 @@ namespace ProjetoDrone.Tests
             drone.Viajar();
             Assert.True(drone.PedidosEntregues() == 1 && drone.TempoTotalGasto() > 0);
         }
+
+        [Fact]
+        public void TesteLancaExcecao()
+        {
+            Drone drone = new Drone(20, 25, "4G", 10);
+            Assert.Throws<InvalidOperationException>( () => drone.Viajar()); // testa se lança exceção quando o drone não recebeu nenhum pedido e tenta viajar
+        }
     }
 }
