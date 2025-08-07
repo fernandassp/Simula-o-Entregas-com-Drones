@@ -28,7 +28,10 @@ Modo de executar:
 1 -Clone o repositório do projeto via GitHub ou abra diretamente no Visual Studio.  
 2- No Visual Studio, abra a solução .sln  
 3- Pressione Ctrl + F5 para executar a aplicação sem debug.    
-4- Interaja com o menu no console para cadastrar drones, pedidos, alocar entregas ou visualizar relatórios (para visualizar dados nos relatórios, certifique-se de antes alocar pedidos nos drones para que as entregas sejam feitas).  
+4- Interaja com o menu no console para cadastrar drones, pedidos, alocar entregas ou visualizar relatórios (para visualizar dados nos relatórios, certifique-se de antes alocar pedidos nos drones para que as entregas sejam feitas). 
+
+### Testes com xUnit
+Foi criado um projeto com o xUnit para a criação de testes automatizados. Para executá-los, vá até o menu superior: Teste, e clique em Executar Todos os Testes. Se estiver tudo funcionando, aparecerá "✅Aprovado" para todos os testes.
 
 ## Prompts utilizados na IA
 Durante o desenvolvimento, foram utilizadas ferramentas de IA para esclarecer dúvidas técnicas e de interpretação, melhorar trechos de código e otimizar lógicas, além de conhecer frameworks para a implementação de testes.  
