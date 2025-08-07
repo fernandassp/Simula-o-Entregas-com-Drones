@@ -35,11 +35,5 @@ namespace ProjetoDrone.Tests
             Assert.False(Simulador.VerificarCoordenadaVálida(coordenada2));
             Assert.False(Simulador.VerificarCoordenadaVálida(coordenada3));
         }
-
-        [Fact]
-        public void EntregaCorretamenteVariosPedidos()
-        {
-           
-        }
     }
 }
